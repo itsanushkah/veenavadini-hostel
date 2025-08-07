@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Us | Veena Vadini Girls Hostel{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Blurred Full-Page Background -->
+<div style="
+  background: url('{% static 'img/veena-vadini-hostel-kolar-road-bhopal-hostels-vrinoaxdbz.jpg.avif' %}') no-repeat center center/cover;
+  filter: blur(8px);
+  transform: scale(1.1);
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: -1;">
+</div>
+
+<!-- ✅ Content Wrapper -->
+<div style="position: relative; z-index: 1;">
+
+  <!-- About Veena Vadini Hostel -->
+  <section class="py-5 m-0">
+    <div class="container" 
+         style="background: rgba(255, 228, 196, 0.4); padding: 30px; border-radius: 10px; color: #3b2f2f;">
+      <h2 class="fw-bold mb-4" >About Veena Vadini Girls Hostel</h2>
+      <p class="lead mb-4" style="text-align:left !important;">
+        Veena Vadini Girls Hostel has been <strong>successfully running for over 17 years</strong>, providing countless students with a safe, hygienic, and truly homely environment. Over the years, it has earned a reputation for offering not just accommodation but also care and guidance that help students feel at ease away from home. The hostel focuses on maintaining high standards of cleanliness, ensuring healthy living conditions, and fostering a sense of community among residents. With its blend of comfort, discipline, and support, it creates an atmosphere where students can focus on their studies, build lifelong friendships, and grow both personally and academically.
+
+      </p>
+    </div>
+  </section>
+
+  <!-- Chairperson Section -->
+  <section class="py-5 w-100">
+    <div class="container" 
+         style="background: rgba(255, 228, 196, 0.4); padding: 30px; border-radius: 10px; color: #3b2f2f;">
+      <div class="row align-items-center" style="min-height:400px;">
+        <div class="col-md-6 d-flex justify-content-center">
+          <img src="{% static 'img/ritu.jpg' %}" 
+               alt="Chairperson Ritu Shrivastava" 
+               class="rounded shadow" 
+               style="max-width: 300px; height: auto; object-fit: cover;">
+        </div>
+        <div class="col-md-6 about-text">
+          <h2 class="fw-bold" style="text-align:left !important;">Message from the Chairperson</h2>
+          <p class="lead" style="text-align:left !important;">
+            Our hostel is committed to fostering an environment where students can feel safe 
+            and focus on their growth. We provide world-class facilities and a homely 
+            atmosphere to ensure every resident thrives.
+          </p>
+          <p style="text-align:left !important;"><strong>Chairperson:</strong> Mrs. Ritu Shrivastava</p>
+          <p style="text-align:left !important;"><strong>Contact:</strong> <a href="tel:+917000783317" style="color:#3b2f2f;">+91 70007 83317</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warden Section -->
+  <section class="py-5 w-100">
+    <div class="container" 
+         style="background: rgba(255, 228, 196, 0.4); padding: 30px; border-radius: 10px; color: #3b2f2f;">
+      <div class="row align-items-center" style="min-height:400px;">
+        <div class="col-md-6 d-flex justify-content-center">
+          <img src="{% static 'img/anita.jpg' %}" 
+               alt="Warden Anita Sonwane" 
+               class="rounded shadow" 
+               style="max-width: 300px; height: auto; object-fit: cover;">
+        </div>
+        <div class="col-md-6 about-text">
+          <h2 class="fw-bold" style="text-align:left !important;">About Our Warden</h2>
+          <p class="lead" style="text-align:left !important;">
+            The hostel is under the supervision of our dedicated warden, who ensures 
+            cleanliness, discipline, and the well-being of all students. 
+            Her guidance keeps the hostel secure and nurturing.
+          </p>
+          <p style="text-align:left !important;"><strong>Warden:</strong> Mrs. Anita Sonwane</p>
+          <p style="text-align:left !important;"><strong>Contact:</strong> <a href="tel:+919425847431" style="color:#3b2f2f;">+91 94258 47431</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div> <!-- ✅ End content wrapper -->
+
+{% endblock %}

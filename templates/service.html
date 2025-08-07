@@ -1,0 +1,114 @@
+{% extends "base.html" %} {% load static %} {% block title %}Facilities | Veena
+Vadini Girls Hostel{% endblock %} {% block content %}
+
+<!-- ✅ Hero Banner with Overlay Blur -->
+<section
+  class="hero-banner position-relative text-white text-center d-flex align-items-center justify-content-center"
+  style="
+    background-image: url('{% static 'img/garden1v.JPG' %}');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  "
+>
+  <!-- ✅ Blur Overlay -->
+  <div
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    "
+  ></div>
+
+  <div class="container position-relative" style="z-index: 2">
+    <h2 style="color: white" class="display-6 fw-bold">Our Facilities</h2>
+    <p class="lead" style="color: #F7F2EC">
+      Comfort, safety, and a homely environment for all residents
+    </p>
+  </div>
+</section>
+
+<!-- ✅ Hostel Facilities Section -->
+<section class="services py-5 mt-5" style="background-color: #EFE9E2 ">
+  <div class="container">
+    <div class="row text-center g-4">
+      <!-- ✅ Facility Card Template -->
+      <div class="col-md-4">
+        <div class="facility-box">
+          <h4>Open Garden</h4>
+          <p>
+            Beautifully maintained open garden in front of the hostel for
+            relaxation and evening walks.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="facility-box">
+          <h4>24/7 CCTV Surveillance</h4>
+          <p>
+            Round-the-clock CCTV cameras and security staff ensure a safe and
+            secure environment.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="facility-box">
+          <h4>Mess Food</h4>
+          <p>
+            Nutritious and hygienic meals served daily in our clean and
+            organized dining area.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="facility-box">
+          <h4>Water Purifier</h4>
+          <p>
+            Safe and clean drinking water is available through advanced water
+            purification systems.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="facility-box">
+          <h4>Comfortable Rooms</h4>
+          <p>
+            Spacious and well-ventilated rooms equipped with beds, storage, and
+            study tables.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="facility-box">
+          <h4>Daily Housekeeping</h4>
+          <p>
+            Rooms and common areas are cleaned regularly to maintain hygiene and
+            comfort.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mx-auto">
+        <div class="facility-box">
+          <h4>Peaceful Study Environment</h4>
+          <p>
+            Quiet and dedicated spaces that allow students to focus and study
+            effectively.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

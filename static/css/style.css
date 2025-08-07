@@ -1,0 +1,170 @@
+/*==============================
+  Font Definitions
+==============================*/
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/*==============================
+  Global Styles
+==============================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/*==============================
+  Header and Navigation
+==============================*/
+header {
+  background-color: #e00e0e;
+  padding: 20px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3a3a3a;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fa0000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0077cc;
+}
+
+header li.active a {
+  background-color: rgba(209, 197, 161, 0.2);
+  color: rgb(161, 240, 59) !important;
+  border-radius: 3px;
+  padding: 4px 8px;
+}
+
+
+/*==============================
+  Hero Section
+==============================*/
+.hero {
+  height: 80vh;
+  background: url('../images/home/hero-bg.jpg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+
+/*==============================
+  Section Styling
+==============================*/
+section {
+  padding: 60px 80px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #222;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+
+/*==============================
+  Footer
+==============================*/
+footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 30px 40px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+/* 🔥 Force override Bootstrap blue on header */
+header.bg-primary {
+  background-color: #1a1a1a !important;  /* beige */
+  background-image: none !important;     /* remove any gradients */
+}
+
+/* Service Cards Hover Effect */
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Images */
+.service-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.service-card:hover .service-img {
+  transform: scale(1.05);
+}

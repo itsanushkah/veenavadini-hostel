@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Banner -->
+<section class="text-center py-5 bg-light">
+  <!-- Expected image size: 1920x400 -->
+  <div class="container">
+    <h1 class="display-4 fw-bold">Contact Us</h1>
+    <p class="lead">We’re here to help — reach out anytime!</p>
+  </div>
+</section>
+
+<!-- Contact Info + Form Section -->
+<section class="container py-5">
+  <div class="row g-5">
+
+    <!-- Contact Info -->
+    <div class="col-md-12">
+      <h2 class="mb-6">Get in Touch</h2>
+      <p><strong>🏠 Address:</strong><br> DK-1/12, Danish Kunj, Kolar Road, Bhopal, MP 462042</p>
+    
+      <p><strong>📞 Phone:</strong><br> +91 70007 83317</p>
+      <p><strong>🕒 Hours:</strong><br> Open 9am to 10pm, 7 days a week</p>
+
+
+      <p><strong> Warden: Mrs. Anita Sonwane<br>
+
+      Contact: +91 94258 47431</p>
+
+      <!-- Embedded Google Map -->
+      <div class="mt-4 rounded overflow-hidden">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.8538812484217!2d77.41856091048764!3d23.175532510516227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43ee86fae8c9%3A0x16b18be1dd9e06c6!2sVeena%20Vadini%20Girls%20Hostel!5e0!3m2!1sen!2sin!4v1753821458410!5m2!1sen!2sin" 
+          width="100%" 
+          height="250" 
+          style="border:0; border-radius:12px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+{% endblock %}
