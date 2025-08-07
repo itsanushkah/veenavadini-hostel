@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -127,3 +129,11 @@ STATICFILES_DIRS=[
     BASE_DIR/"static"
 
 ]
+
+
+import os
+if os.environ.get('RENDER'):
+    ALLOWED_HOSTS = ['*']
+    DEBUG = False
+
+
