@@ -4,82 +4,69 @@
 {% block title %}About Us | Veena Vadini Girls Hostel{% endblock %}
 
 {% block content %}
+<section class="page-hero text-center" style="background-image: url('{% static 'img/outer6h.JPG' %}')">
+  <div class="container">
+    <span class="eyebrow">About us</span>
+    <h1>17+ years of care</h1>
+    <p>A trusted home for students on Kolar Road, Bhopal.</p>
+  </div>
+</section>
 
-<!-- ✅ Blurred Full-Page Background -->
-<div style="
-  background: url('{% static 'img/veena-vadini-hostel-kolar-road-bhopal-hostels-vrinoaxdbz.jpg.avif' %}') no-repeat center center/cover;
-  filter: blur(8px);
-  transform: scale(1.1);
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  z-index: -1;">
-</div>
-
-<!-- ✅ Content Wrapper -->
-<div style="position: relative; z-index: 1;">
-
-  <!-- About Veena Vadini Hostel -->
-  <section class="py-5 m-0">
-    <div class="container" 
-         style="background: rgba(255, 228, 196, 0.4); padding: 30px; border-radius: 10px; color: #3b2f2f;">
-      <h2 class="fw-bold mb-4" >About Veena Vadini Girls Hostel</h2>
-      <p class="lead mb-4" style="text-align:left !important;">
-        Veena Vadini Girls Hostel has been <strong>successfully running for over 17 years</strong>, providing countless students with a safe, hygienic, and truly homely environment. Over the years, it has earned a reputation for offering not just accommodation but also care and guidance that help students feel at ease away from home. The hostel focuses on maintaining high standards of cleanliness, ensuring healthy living conditions, and fostering a sense of community among residents. With its blend of comfort, discipline, and support, it creates an atmosphere where students can focus on their studies, build lifelong friendships, and grow both personally and academically.
-
-      </p>
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 reveal">
+        <img class="story-img" src="{% static 'img/garden2h.JPG' %}" alt="The hostel garden with its painted Warli wall" loading="lazy" />
+      </div>
+      <div class="col-lg-6 reveal">
+        <span class="eyebrow">Our story</span>
+        <h2 class="section-title">More than a place to stay</h2>
+        <p class="text-muted-warm">
+          Veena Vadini Girls Hostel has been running successfully for over 17 years, giving countless students a safe, hygienic and truly homely environment. Over the years it has earned a reputation for offering not just accommodation, but care and guidance that help students feel at ease away from home.
+        </p>
+        <p class="text-muted-warm">
+          With its blend of comfort, discipline and support, it's a place where students can focus on their studies, build lifelong friendships and grow both personally and academically.
+        </p>
+        <ul class="check-list">
+          <li><i class="bi bi-check-circle-fill"></i> High standards of cleanliness and hygiene</li>
+          <li><i class="bi bi-check-circle-fill"></i> Healthy living and a sense of community</li>
+          <li><i class="bi bi-check-circle-fill"></i> Caring supervision, round the clock</li>
+        </ul>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Chairperson Section -->
-  <section class="py-5 w-100">
-    <div class="container" 
-         style="background: rgba(255, 228, 196, 0.4); padding: 30px; border-radius: 10px; color: #3b2f2f;">
-      <div class="row align-items-center" style="min-height:400px;">
-        <div class="col-md-6 d-flex justify-content-center">
-          <img src="{% static 'img/ritu.jpg' %}" 
-               alt="Chairperson Ritu Shrivastava" 
-               class="rounded shadow" 
-               style="max-width: 300px; height: auto; object-fit: cover;">
+<section class="section bg-cream-2">
+  <div class="container">
+    <div class="text-center mx-auto mb-5 reveal" style="max-width: 600px">
+      <span class="eyebrow">The people behind it</span>
+      <h2 class="section-title">Meet our team</h2>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-5 reveal">
+        <div class="person-card">
+          <div class="photo"><img src="{% static 'img/ritu.jpg' %}" alt="Mrs. Ritu Shrivastava, Chairperson" loading="lazy" /></div>
+          <div class="body">
+            <span class="role">Chairperson</span>
+            <h3>Mrs. Ritu Shrivastava</h3>
+            <p>"Our hostel is committed to fostering an environment where students can feel safe and focus on their growth. We provide world-class facilities and a homely atmosphere to ensure every resident thrives."</p>
+            <a href="tel:+917000783317" class="btn-vv btn-outline-vv"><i class="bi bi-telephone"></i> +91 70007 83317</a>
+          </div>
         </div>
-        <div class="col-md-6 about-text">
-          <h2 class="fw-bold" style="text-align:left !important;">Message from the Chairperson</h2>
-          <p class="lead" style="text-align:left !important;">
-            Our hostel is committed to fostering an environment where students can feel safe 
-            and focus on their growth. We provide world-class facilities and a homely 
-            atmosphere to ensure every resident thrives.
-          </p>
-          <p style="text-align:left !important;"><strong>Chairperson:</strong> Mrs. Ritu Shrivastava</p>
-          <p style="text-align:left !important;"><strong>Contact:</strong> <a href="tel:+917000783317" style="color:#3b2f2f;">+91 70007 83317</a></p>
+      </div>
+      <div class="col-md-6 col-lg-5 reveal">
+        <div class="person-card">
+          <div class="photo"><img src="{% static 'img/anita.jpg' %}" alt="Mrs. Anita Sonwane, Warden" loading="lazy" /></div>
+          <div class="body">
+            <span class="role">Warden</span>
+            <h3>Mrs. Anita Sonwane</h3>
+            <p>Our dedicated warden looks after cleanliness, discipline and the well-being of every student. Her guidance keeps the hostel secure and nurturing.</p>
+            <a href="tel:+919425847431" class="btn-vv btn-outline-vv"><i class="bi bi-telephone"></i> +91 94258 47431</a>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Warden Section -->
-  <section class="py-5 w-100">
-    <div class="container" 
-         style="background: rgba(255, 228, 196, 0.4); padding: 30px; border-radius: 10px; color: #3b2f2f;">
-      <div class="row align-items-center" style="min-height:400px;">
-        <div class="col-md-6 d-flex justify-content-center">
-          <img src="{% static 'img/anita.jpg' %}" 
-               alt="Warden Anita Sonwane" 
-               class="rounded shadow" 
-               style="max-width: 300px; height: auto; object-fit: cover;">
-        </div>
-        <div class="col-md-6 about-text">
-          <h2 class="fw-bold" style="text-align:left !important;">About Our Warden</h2>
-          <p class="lead" style="text-align:left !important;">
-            The hostel is under the supervision of our dedicated warden, who ensures 
-            cleanliness, discipline, and the well-being of all students. 
-            Her guidance keeps the hostel secure and nurturing.
-          </p>
-          <p style="text-align:left !important;"><strong>Warden:</strong> Mrs. Anita Sonwane</p>
-          <p style="text-align:left !important;"><strong>Contact:</strong> <a href="tel:+919425847431" style="color:#3b2f2f;">+91 94258 47431</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div> <!-- ✅ End content wrapper -->
-
+  </div>
+</section>
 {% endblock %}

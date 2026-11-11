@@ -1,27 +1,40 @@
-<footer class="bg-dark text-white py-4 mt-5">
+<footer class="site-footer">
   <div class="container">
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
-      
-      <!-- Hostel Info -->
-      <div style="display: flex; align-items: center; justify-content: center;">
-        <strong>📍</strong>
-         DK 1/12, Danish Kunj, Kolar Rd, Bhopal, Madhya Pradesh 462042
-      </div>
-
-      <!-- Phone -->
-      <div>
-        📞 <a href="tel:+917000783317" class="text-white text-decoration-none">+91 7000783317</a>
-      </div>
-
-      <!-- External Link -->
-      <div>
-        🎓 <a href="https://www.vvacbhopal.com/" target="_blank" class="text-warning fw-semibold">
-          Veena Vadini Ayurvedic College
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <a class="brand mb-3" href="/">
+          <span class="brand-mark">V</span>
+          <span>
+            <span class="brand-name">Veena Vadini</span>
+            <span class="brand-sub">Girls Hostel · Bhopal</span>
+          </span>
         </a>
+        <p class="mt-3 mb-0" style="max-width: 360px">
+          A safe, clean and homely place for girls to live and study, on Kolar Road, Bhopal, for over 17 years.
+        </p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us/">About us</a></li>
+          <li><a href="{% url 'service' %}">Facilities</a></li>
+          <li><a href="/gallery/">Gallery</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-4">
+        <h4>Visit or call</h4>
+        <ul>
+          <li><i class="bi bi-geo-alt"></i>DK 1/12, Danish Kunj, Kolar Road, Bhopal, MP 462042</li>
+          <li><i class="bi bi-telephone"></i><a href="tel:+917000783317">+91 70007 83317</a></li>
+          <li><i class="bi bi-mortarboard"></i><a href="https://www.vvacbhopal.com/" target="_blank" rel="noopener">Veena Vadini Ayurvedic College</a></li>
+        </ul>
       </div>
     </div>
-
-    <!-- Copyright -->
-    <p class="mb-0 text-center mt-3">&copy; {{ year|default:2025 }} Veena Vadini Girls Hostel | All Rights Reserved.</p>
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>&copy; {% now "Y" %} Veena Vadini Girls Hostel. All rights reserved.</span>
+      <span>Kolar Road, Bhopal</span>
+    </div>
   </div>
 </footer>

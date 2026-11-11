@@ -1,109 +1,47 @@
-{% extends "base.html" %} {% load static %} {% block title %}Facilities | Veena
-Vadini Girls Hostel{% endblock %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
 
-<!-- ✅ Hero Banner with Overlay Blur -->
-<section
-  class="hero-banner position-relative text-white text-center d-flex align-items-center justify-content-center"
-  style="
-    background-image: url('{% static 'img/garden1v.JPG' %}');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-  "
->
-  <!-- ✅ Blur Overlay -->
-  <div
-    style="
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(10px);
-    "
-  ></div>
+{% block title %}Facilities | Veena Vadini Girls Hostel{% endblock %}
 
-  <div class="container position-relative" style="z-index: 2">
-    <h2 style="color: white" class="display-6 fw-bold">Our Facilities</h2>
-    <p class="lead" style="color: #F7F2EC">
-      Comfort, safety, and a homely environment for all residents
-    </p>
+{% block content %}
+<section class="page-hero text-center" style="background-image: url('{% static 'img/garden16h.JPG' %}')">
+  <div class="container">
+    <span class="eyebrow">Facilities</span>
+    <h1>Comfort, safety &amp; care</h1>
+    <p>Everything you need for a comfortable stay and focused study.</p>
   </div>
 </section>
 
-<!-- ✅ Hostel Facilities Section -->
-<section class="services py-5 mt-5" style="background-color: #EFE9E2 ">
+<section class="section">
   <div class="container">
-    <div class="row text-center g-4">
-      <!-- ✅ Facility Card Template -->
-      <div class="col-md-4">
-        <div class="facility-box">
-          <h4>Open Garden</h4>
-          <p>
-            Beautifully maintained open garden in front of the hostel for
-            relaxation and evening walks.
-          </p>
+    <div class="row g-4">
+      {% for f in facilities %}
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="facility-card">
+          <div class="img-wrap"><img src="{% static 'img/'|add:f.img %}" alt="{{ f.title }}" loading="lazy" /></div>
+          <div class="body">
+            <div class="feature-icon"><i class="bi {{ f.icon }}"></i></div>
+            <h3>{{ f.title }}</h3>
+            <p>{{ f.text }}</p>
+          </div>
         </div>
       </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-      <div class="col-md-4">
-        <div class="facility-box">
-          <h4>24/7 CCTV Surveillance</h4>
-          <p>
-            Round-the-clock CCTV cameras and security staff ensure a safe and
-            secure environment.
-          </p>
+<section class="section pt-0">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h2 class="mb-2">Come see it for yourself</h2>
+          <p class="mb-0 fs-5">Visit any day between 9am and 10pm, or call us with any questions.</p>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="facility-box">
-          <h4>Mess Food</h4>
-          <p>
-            Nutritious and hygienic meals served daily in our clean and
-            organized dining area.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="facility-box">
-          <h4>Water Purifier</h4>
-          <p>
-            Safe and clean drinking water is available through advanced water
-            purification systems.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="facility-box">
-          <h4>Comfortable Rooms</h4>
-          <p>
-            Spacious and well-ventilated rooms equipped with beds, storage, and
-            study tables.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="facility-box">
-          <h4>Daily Housekeeping</h4>
-          <p>
-            Rooms and common areas are cleaned regularly to maintain hygiene and
-            comfort.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mx-auto">
-        <div class="facility-box">
-          <h4>Peaceful Study Environment</h4>
-          <p>
-            Quiet and dedicated spaces that allow students to focus and study
-            effectively.
-          </p>
+        <div class="col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">
+          <a href="tel:+917000783317" class="btn-vv btn-light-vv"><i class="bi bi-telephone"></i> Call now</a>
+          <a href="/gallery/" class="btn-vv btn-outline-vv" style="border-color: rgba(255,255,255,.6); color: #fff">View gallery</a>
         </div>
       </div>
     </div>

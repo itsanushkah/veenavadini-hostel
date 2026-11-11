@@ -1,24 +1,43 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block title %}Gallery | Veena Vadini Girls Hostel{% endblock %}
 
 {% block content %}
-<section class="py-5 bg-light">
+<section class="page-hero text-center" style="background-image: url('{% static 'img/outer16h.JPG' %}')">
   <div class="container">
-    <h2 class="text-center mb-4">Our Hostel Gallery</h2>
-
-    {% for title, images in sections %}
-      <h3 class="h4 mt-5 mb-3" style="color: #3b2f2f">{{ title }}</h3>
-      <div class="row g-3 gallery-grid">
-        {% for image in images %}
-          <div class="col-6 col-md-4 col-lg-3">
-            <a href="{% static 'img/'|add:image %}" target="_blank" rel="noopener">
-              <img src="{% static 'img/'|add:image %}" alt="{{ title }} at Veena Vadini Girls Hostel" loading="lazy" />
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
+    <span class="eyebrow">Gallery</span>
+    <h1>Take a look around</h1>
+    <p>Real photos of our building, garden, rooms and more.</p>
   </div>
 </section>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-bar" role="group" aria-label="Filter photos">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All <span class="count">{{ total }}</span></button>
+      {% for s in sections %}
+        <button class="filter-btn" data-filter="{{ s.slug }}" aria-pressed="false">{{ s.title }} <span class="count">{{ s.images|length }}</span></button>
+      {% endfor %}
+    </div>
+
+    <div class="gallery-grid">
+      {% for s in sections %}
+        {% for image in s.images %}
+          <button type="button" class="gallery-item" data-cat="{{ s.slug }}" data-full="{% static 'img/'|add:image %}">
+            <img src="{% static 'img/'|add:image %}" alt="{{ s.title }} at Veena Vadini Girls Hostel" loading="lazy" />
+          </button>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  <button class="lb-prev" aria-label="Previous photo"><i class="bi bi-chevron-left"></i></button>
+  <img src="" alt="" />
+  <button class="lb-next" aria-label="Next photo"><i class="bi bi-chevron-right"></i></button>
+  <div class="lb-count"></div>
+</div>
 {% endblock %}

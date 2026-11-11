@@ -9,16 +9,38 @@ def aboutUS(request):
     return render(request, "aboutus.html")
 
 
+FACILITIES = [
+    {"title": "Comfortable Rooms", "icon": "bi-house-heart", "img": "room_imgh9.JPG",
+     "text": "Spacious, well-ventilated rooms with beds, storage and study tables."},
+    {"title": "Mess Food", "icon": "bi-egg-fried", "img": "veenamess.JPG",
+     "text": "Nutritious and hygienic meals served daily in a clean, organised dining area."},
+    {"title": "24/7 CCTV Surveillance", "icon": "bi-camera-video", "img": "outer14v.JPG",
+     "text": "Round-the-clock CCTV cameras and security staff keep the hostel safe and secure."},
+    {"title": "Open Garden", "icon": "bi-tree", "img": "garden2h.JPG",
+     "text": "A beautifully kept garden in front of the hostel for relaxing and evening walks."},
+    {"title": "Water Purifier", "icon": "bi-droplet", "img": "water.JPG",
+     "text": "Safe, clean drinking water from an advanced purification system."},
+    {"title": "Daily Housekeeping", "icon": "bi-stars", "img": "room_imgh4.JPG",
+     "text": "Rooms and common areas are cleaned regularly to keep everything hygienic."},
+    {"title": "Personal Storage", "icon": "bi-lock", "img": "almariv.JPG",
+     "text": "Lockable steel cupboards so every resident can keep her things safe."},
+    {"title": "Peaceful Study Environment", "icon": "bi-book", "img": "room_imgv12.JPG",
+     "text": "Quiet spaces that let students focus and study effectively."},
+    {"title": "Friendly Office", "icon": "bi-person-check", "img": "office1v.JPG",
+     "text": "Staff on hand from 9am to 10pm for parents, visitors and any help you need."},
+]
+
+
 def service(request):
-    return render(request, "service.html")
+    return render(request, "service.html", {"facilities": FACILITIES})
 
 
 def contactus(request):
     return render(request, "contactus.html")
 
 
-GALLERY_SECTIONS = [
-    ('Building & Exterior', [
+GALLERY_SECTIONS_RAW = [
+    ('Building', [
         'outer1v.JPG',
         'outer2h.JPG',
         'outer3h.JPG',
@@ -70,7 +92,7 @@ GALLERY_SECTIONS = [
         'room_imgv11.JPG',
         'room_imgv12.JPG',
     ]),
-    ('Mess, Office & More', [
+    ('Mess & more', [
         'almariv2.JPG',
         'almariv.JPG',
         'office1v.JPG',
@@ -81,5 +103,12 @@ GALLERY_SECTIONS = [
 ]
 
 
+GALLERY_SECTIONS = [
+    {"title": title, "slug": slug, "images": images}
+    for (title, images), slug in zip(GALLERY_SECTIONS_RAW, ["building", "garden", "rooms", "more"])
+]
+
+
 def Gallery(request):
-    return render(request, "gallery.html", {"sections": GALLERY_SECTIONS})
+    total = sum(len(s["images"]) for s in GALLERY_SECTIONS)
+    return render(request, "gallery.html", {"sections": GALLERY_SECTIONS, "total": total})
