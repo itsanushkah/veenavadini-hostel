@@ -19,7 +19,6 @@ from django.conf import settings
 
 from django.urls import path
 from wscubetech import views
-from django.conf.urls.static import static
 
 urlpatterns = [
     #html page render
@@ -28,14 +27,9 @@ urlpatterns = [
     #static url
     path('admin/', admin.site.urls),
     path('about-us/',views.aboutUS),
-     path('course/',views.Course),
     # to uconnect page using django inbuilt 
      path('service/',views.service,name="service"),
     
     path('gallery/',views.Gallery),
 
-    #dynamic url
-    path('course/<courseid>',views.CourseDetails),
 ]
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])

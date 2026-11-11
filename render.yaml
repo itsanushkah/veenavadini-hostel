@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: veenavadini-hostel
+    runtime: python
+    plan: free
+    buildCommand: ./build.sh
+    startCommand: gunicorn wscubetech.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: SECRET_KEY
+        generateValue: true

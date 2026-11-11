@@ -1,47 +1,85 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
-#html page render 
+
 def homePage(request):
-    #How to Pass Data From Django View to Template from here to
-    # data={
-    #     "title":" welcome to my Home Page",
-    #     "bdata":"This is a ran designed homepage using only HTML and CSS..",
-    #     "clist":["php","java", "c++"],
-    #     "student_details":[
-    #         {"name":"pradeep","phone":1234567890},
-    #          {"name":"jeetu","phone":67890}
-    #         ],
-    #     "numbers":[14,23,33,42,25,55]
-    # }
-    # #here
+    return render(request, "index.html")
 
-    return render(request,'index.html')
-#static call url
+
 def aboutUS(request):
-   return render(request,'aboutus.html')
+    return render(request, "aboutus.html")
+
+
 def service(request):
-   return render(request,'service.html')
-def Course(request):
-    return HttpResponse("Welcome checkout our Course")
+    return render(request, "service.html")
+
+
 def contactus(request):
-    return render(request,'contactus.html')
+    return render(request, "contactus.html")
+
+
+GALLERY_SECTIONS = [
+    ('Building & Exterior', [
+        'outer1v.JPG',
+        'outer2h.JPG',
+        'outer3h.JPG',
+        'outer4h.JPG',
+        'outer5h.JPG',
+        'outer6h.JPG',
+        'outer7h.JPG',
+        'outer9h.JPG',
+        'outer10h.JPG',
+        'outer11h.JPG',
+        'outer12h.JPG',
+        'outer13v.JPG',
+        'outer14v.JPG',
+        'outer15v.JPG',
+        'outer16h.JPG',
+        'outer17h.JPG',
+    ]),
+    ('Garden', [
+        'garden1v.JPG',
+        'garden2h.JPG',
+        'garden3v..JPG',
+        'garden4v..JPG',
+        'garden5h.JPG',
+        'garden6h.JPG',
+        'garden7v..JPG',
+        'garden8h.JPG',
+        'garden9v.JPG',
+        'garden10.JPG',
+        'garden11v.JPG',
+        'garden12v.JPG',
+        'garden13v.JPG',
+        'garden14v.JPG',
+        'garden15v.JPG',
+        'garden16h.JPG',
+        'garden17v.JPG',
+        'garden18v.JPG',
+    ]),
+    ('Rooms', [
+        'room_imgh4.JPG',
+        'room_imgh8.JPG',
+        'room_imgh9.JPG',
+        'room_imgv1.JPG',
+        'room_imgv2.JPG',
+        'room_imgv3.JPG',
+        'room_imgv5.JPG',
+        'room_imgv6.JPG',
+        'room_imgv7.JPG',
+        'room_imgv10.JPG',
+        'room_imgv11.JPG',
+        'room_imgv12.JPG',
+    ]),
+    ('Mess, Office & More', [
+        'almariv2.JPG',
+        'almariv.JPG',
+        'office1v.JPG',
+        'office2v.JPG',
+        'veenamess.JPG',
+        'water.JPG',
+    ]),
+]
+
+
 def Gallery(request):
-   return render(request,'gallery.html')
-
-#dynamic url call
-def CourseDetails(request,courseid):
-    return HttpResponse(courseid)
-
-# Use a list in the view and pass it to the template. Step 1: In your view function (views.py), pass the image numbers as a list:
-# views.py
-def Gallery(request):
-    image_list = [
-       
-    "outer6h.JPG", "outer7h.JPG", "outer9h.JPG", "outer10h.JPG",
-    "outer11h.JPG", "outer12h.JPG","outer2h.JPG", "outer3h.JPG", "outer16h.JPG", "outer17h.JPG",
-    "garden2h.JPG", "garden5h.JPG",
-    "garden16h.JPG", "room_imgh4.JPG", "garden6h.JPG","outer4h.JPG", "outer5h.JPG", "garden8h.JPG", "room_imgh8.JPG", "room_imgh9.JPG"
-
-    ]
-    return render(request, 'gallery.html', {'image_list': image_list})
+    return render(request, "gallery.html", {"sections": GALLERY_SECTIONS})
